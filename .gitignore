@@ -1,1 +1,5 @@
+# For temp on Mac
+.DS_Store
+
+# mdbook
 book
