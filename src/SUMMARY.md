@@ -2,10 +2,8 @@
 
 [写在前面](./写在前面.md)
 
-# 热身
-
-[Vivado安装](./Vivado安装.md)
-[Lab0](./Lab0.md)
+[Vivado安装](./热身/Vivado安装.md)
+[Lab0](./热身/Lab0.md)
 
 # Lab1
 
