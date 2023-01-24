@@ -1,5 +1,7 @@
 # Lab0: Warmup
 
+本实验由两部分组成：配置实验环境，使用Vivado。
+
 > 💡开始之前：
 >
 > * 实验工程的路径不应有中文和空格。
@@ -33,6 +35,10 @@
 
 * [配置git](https://www.windows11.pro/5639.html)，如果你之前从未使用过git，可以查看“其他”中“git入门”一节。
 * [配置make](https://tehub.com/a/aCYp1uw0tG)。
+
+配置之后，请新建一个仓库玩耍一下，并建一个“Hello World”工程查看make工具是否能够正常使用。
+
+
 
 
 
