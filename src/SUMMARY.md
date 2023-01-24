@@ -7,3 +7,6 @@
 
 # Lab1
 
+- [Lab1](./Lab1/Lab1.md)
+  - [ALU/RegFile](./Lab1/ALU_RegFile/ALU_RegFile.md)
+  - [FSM](./Lab1/FSM/FSM.md)
