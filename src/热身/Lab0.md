@@ -19,7 +19,7 @@
 >   - Text Editor中可以调整编辑器为其他第三方编辑器 如VS Code
 >   - Text Editor → Fonts and Colors可以调整Fonts family和size，原始的太费眼睛了
 
-⬆️**开始实验之前，请认真阅读以上建议**（句末不带句号的是上一届助教给我们的建议，我搬过来，很有用）
+⬆️**开始实验之前，请认真阅读以上建议**（句末不带句号的是上一届助教 [@NonoHh](https://github.com/NonoHh) 给我们的建议，我搬过来，很有用）
 
 ⚠️ 本实验需要提交实验报告（Lab0-3合成一份提交）
 
@@ -29,4 +29,10 @@
 
 本学期实验需要使用git记录实验过程，助教会根据你的git log判断实验完成情况，缺少log或commit行为异常会影响实验成绩。
 
-在开始实验之前，你需要在电脑上配置`git, make`
+在开始实验之前，你需要在电脑上配置`git, make`。
+
+* [配置git](https://www.windows11.pro/5639.html)，如果你之前从未使用过git，可以查看“其他”中“git入门”一节。
+* [配置make](https://tehub.com/a/aCYp1uw0tG)。
+
+
+
