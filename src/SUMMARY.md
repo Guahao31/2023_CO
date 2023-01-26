@@ -11,3 +11,6 @@
   - [ALU](./Lab1/ALU_RegFile/ALU.md)
   - [Register Files](./Lab1/ALU_RegFile/RegFile.md)
   - [FSM](./Lab1/FSM/FSM.md)
+
+# Lab2
+- [Lab2](./Lab2/Lab2.md)
