@@ -57,4 +57,4 @@ $ git config --global user.email "CoputerOrganization@zju.edu.cn"
 如同Galgame会有剧情分支一样，我们的工程可能延伸出来若干`feature`，我们可以使用`git checkout -b <feature>`来新建一个分支，并在这个分支上完成相关工作，最后通过`git merge`将新的内容合并到之前的主分支中。（有可能需要解决不同分支的冲突）
 分支算是`git`的灵魂之一，当然并不属于非常基本的内容，如果你好奇的话，请自行学习并尝试。
 
-以上内容只是`git`使用的最基本指令，你还可以学习使用`git`管理工程的工作流(比如[bilibili视频](https://www.bilibili.com/video/BV19e4y1q7JJ))。如果遇到问题，可以查看`git`文档或`git --help`查看帮助。
+以上内容只是`git`使用的最基本指令，你还可以学习使用`git`管理工程的工作流(比如[bilibili视频](https://www.bilibili.com/video/BV19e4y1q7JJ))，如何控制`git`记录哪些文件的变化([.gitignore](https://git-scm.com/docs/gitignore))。如果遇到问题，可以查看`git`文档或`git --help`查看帮助。
