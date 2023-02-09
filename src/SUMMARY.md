@@ -14,3 +14,7 @@
 
 # Lab2
 - [Lab2](./Lab2/Lab2.md)
+
+
+# 其他
+- [Git 基础](./Other/about_git.md)
