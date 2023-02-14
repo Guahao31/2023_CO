@@ -27,6 +27,10 @@
 
 ⚠️ 本实验不需要验收
 
+⚠️ 从本实验开始，每个实验小节（如ALU、Register File、FSM）都可能出现思考题，你需要在报告中给出对思考题的回答，思考题的格式类似于：
+
+> ❓这是一个思考题
+
 ## 环境配置
 
 本学期实验需要使用git记录实验过程，助教会根据你的git log判断实验完成情况，缺少log或commit行为异常会影响实验成绩。
@@ -45,3 +49,28 @@
 请注意⚠️<u>| **slides中使用到`bd`文件的地方都替换为Verilog代码。**|</u>
 
 请阅读slides，完成实验并保留截图证明自己完成了全部的流程，截图需要在实验报告中给出。
+
+
+
+在你过完实验流程之后，请完成思考题：
+
+> ❓ 助教在做《计算机体系结构》实验时，在`Message Window`中看到了下列Error：
+>
+> ```
+> [Drc 23-20] Rule violation (NSTD-1) Unspecified I/O Standard: 41 out of 41 logical ports use I/O standard (IOSTANDARD) value 'DEFAULT', instead of a user assigned specific value. This may cause I/O contention or incompatibility with the board power or connectivity affecting performance, signal integrity or in extreme cases cause damage to the device or the components to which it is connected. To correct this violation, specify all I/O standards. This design will fail to generate a bitstream unless all logical ports have a user specified I/O standard value defined. To allow bitstream creation with unspecified I/O standard values (not recommended), use this command: set_property SEVERITY {Warning} [get_drc_checks NSTD-1].  NOTE: When using the Vivado Runs infrastructure (e.g. launch_runs Tcl command), add this command to a .tcl file and add that file as a pre-hook for write_bitstream step for the implementation run. Problem ports: BTN_X[4:0], BTN_Y[3], BTN_Y[0], SW[15], SW[14], SW[13], SW[7], SW[6], SW[5], SW[4], SW[3], SW[2], SW[1], SW[0], VGA_B[3:0]... and (the first 15 of 28 listed).
+> ```
+>
+> 请你帮助可怜的助教解决这个问题😭，完成实验！
+>
+> * 你需要说明：
+>   * 这个Error是出在哪个阶段（Synthesis/Implementation/Generate Bitstream）？
+>   * 助教应该怎么做？（请至少给出一种可能的解决方式）
+>   * 你是通过什么途径了解与解决这个Error的？（简单说明即可，参考内容请给出链接）
+> * 你不需要理解与说明：
+>   * 这个错误到底是什么东西，这个错误是怎么产生的。
+> * 你可能通过以下途径完成本题：
+>   * 认真阅读**报错信息**，说不定解决方案就在Error中了？
+>   * 使用搜索引擎（最好不要用Baidu），粘贴报错的**头部**，看看能不能借鉴前人的智慧。
+>   * 善用[官方](https://support.xilinx.com/)。
+>
+> 感谢你帮助助教完成了实验😊！之后的实验中，如果你发现了各种报错（Critical Warnings/Errors）也可以尝试通过今天的途径解决。
