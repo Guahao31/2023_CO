@@ -7,6 +7,7 @@ theme:
   language: zh
   features:
     - content.code.copy
+    - navigation.tabs
   icon:
     repo: fontawesome/brands/git-alt
     
@@ -29,3 +30,6 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Warm Up:
+    - Vivado 安装: warmup/Vivado_installation.md
+    - Lab0: warmup/Lab0.md
