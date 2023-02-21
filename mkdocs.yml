@@ -8,6 +8,7 @@ theme:
   features:
     - content.code.copy
     - navigation.tabs
+    - navigation.sections
   icon:
     repo: fontawesome/brands/git-alt
     
@@ -33,3 +34,7 @@ nav:
   - Warm Up:
     - Vivado 安装: warmup/Vivado_installation.md
     - Lab0: warmup/Lab0.md
+  - Lab1: 
+    - Lab1/Lab1.md
+    - ALU: Lab1/ALU_RegFile/ALU.md
+
