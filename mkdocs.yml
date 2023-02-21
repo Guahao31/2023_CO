@@ -42,3 +42,6 @@ nav:
   - Lab2: 
     - Lab2/Lab2.md
 
+  - Other:
+    - Git 基础: Other/about_git.md
+
