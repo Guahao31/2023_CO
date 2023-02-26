@@ -2,7 +2,7 @@
 
 本仓库用来发布《计算机组成与设计》课程实验文档，你可以直接查看[在线文档](https://guahao31.github.io/2023_CO)，或将本仓库拉至本地部署。
 
-本文档面向对象为2022-2023春夏《计算机组成与设计》**刘海风老师**班，如果你修读的是《计算机组成》，可以查看 [@Artessay](https://github.com/artessay) 所写的[实验文档](https://github.com/Artessay/ZJU-Computer-Organization-Lab-2023)。
+本文档面向对象为2022-2023春夏《计算机组成与设计》**刘海风老师**班，如果你修读的是《计算机组成》，可以查看 [@Artessay](https://github.com/artessay) 所写的[实验文档](https://artessay.github.io/ZJU-Computer-Organization-Lab-2023/#/)。
 
 感谢 [@NonoHh](https://github.com/NonoHh) 和 [@Artessay](https://github.com/artessay) 学长的指导与建议！
 
