@@ -7,7 +7,7 @@ Finite State Machine（FSM，有限状态机）是在有限个状态之间按照
 对于简单的 FSM，设计思路一般是先画出状态转移图，所以
 
 ???+ question "思考题"
-    请画出检测序列 *1110010* 的 Moore 型 FSM 的状态图（你可以使用纸笔清晰画出并拍照，或使用[ drawio ](https://app.diagrams.net/)等工具完成制图）。
+    请画出检测序列 *1110010* 的 Moore 型 FSM 的状态图（你可以使用纸笔清晰画出并拍照，或使用 [drawio](https://app.diagrams.net/)、[FSM Designer](https://madebyevan.com/fsm/) 等工具完成制图）。
 
 ## 模块实现
 

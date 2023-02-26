@@ -7,8 +7,8 @@
 不知道你是否经历过以下痛苦：
 
 > * 误删重要源码：在一个大作业即将完成时，
->   * Windows 用户：不小心按 `shift+delete` 又敲了一下 `enter` 把关键源码删了
->   * Linux 用户：`rm main.c`
+>     * Windows 用户：不小心按 `shift+delete` 又敲了一下 `enter` 把关键源码删了
+>     * Linux 用户：`rm main.c`
 > * 对已经写好的代码进行了很大的改动，发现越改越错，但是忘记了改过哪里
 > * 小组合作时使用“基于QQ的版本控制”，最后代码合到一起根本过不了编译
 
@@ -24,13 +24,13 @@ $ git config --global user.name "CO_2023"
 $ git config --global user.email "CoputerOrganization@zju.edu.cn"
 ```
 
-更多的配置内容，可以查看[ git 文档](https://git-scm.com/docs/git-config#_configuration_file)。
+更多的配置内容，可以查看 [git 文档](https://git-scm.com/docs/git-config#_configuration_file)。
 
 ## `git init` & `git clone`
 
 如果你从零开始一个工程，需要使用 `git init` 来对当前目录进行相关的初始化，它会创建一个 `.git` 目录用来保存信息。
 
-如果已经有人提供了一个初始仓库，并将其托管到了某平台（比如 [GitHub](github.com)），就可以使用 `git clone <repository>` 将这个工程`克隆`下来。
+如果已经有人提供了一个初始仓库，并将其托管到了某平台（比如 [GitHub](https://github.com)），就可以使用 `git clone <repository>` 将这个工程`克隆`下来。
 
 现在，你已经开启了一个“新的游戏存档”，可以开始你的工作与游戏了！
 
@@ -39,9 +39,9 @@ $ git config --global user.email "CoputerOrganization@zju.edu.cn"
 当你完成了一部分任务，希望进行存档时，可以：
 
 * `git status` 查看你到底对什么内容进行了修改
-  * 你还可以用 `git diff` 来查看在上一个存档之后，你具体进行了什么修改
+    * 你还可以用 `git diff` 来查看在上一个存档之后，你具体进行了什么修改
 * `git add <pathspec>` 将你想保留在新的存档的更改添加进来
-  * 如果你想保留当前工作目录下的所有更改，可以 `git add .`
+    * 如果你想保留当前工作目录下的所有更改，可以 `git add .`
 * `git commit -m "some log"` 通过 `commit` 来对你的更改进行提交
 
 至此，一个新的存档产生了，你之后的工作都会在这个存档的基础上完成。

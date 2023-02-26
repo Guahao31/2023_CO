@@ -2,28 +2,29 @@
 
 本仓库用来发布《计算机组成与设计》课程实验文档，你可以直接查看[在线文档](https://guahao31.github.io/2023_CO)，或将本仓库拉至本地部署。
 
-本文档面向对象为2022-2023春夏《计算机组成与设计》**刘海风老师**班，如果你修读的是《计算机组成》，可以查看 [@Artessay](https://github.com/artessay) 所写的[实验文档](https://artessay.github.io/ZJU-Computer-Organization-Lab-2023/#/)。
+本文档面向对象为 2022-2023 春夏《计算机组成与设计》**刘海风老师**班，如果你修读的是《计算机组成》，可以查看 [@Artessay](https://github.com/artessay) 所写的[实验文档](https://artessay.github.io/ZJU-Computer-Organization-Lab-2023/#/)。
 
 感谢 [@NonoHh](https://github.com/NonoHh) 和 [@Artessay](https://github.com/artessay) 学长的指导与建议！
 
 ## 如何在本地构建？
 
-本文档使用 [mkdocs](https://www.mkdocs.org/) 构建，并使用了 [material](https://squidfunk.github.io/mkdocs-material/) 第三方主题，你需要在本地依次序安装 [Python](https://python.org)、mkdocs、material 主题。
+本文档使用 [mkdocs](https://www.mkdocs.org/) 构建，并使用了 [material](https://squidfunk.github.io/mkdocs-material/) 第三方主题，你需要在本地依次序安装 [Python](https://python.org)、mkdocs、material 主题、heti 插件。
 
 ### Python 安装
 
 官网[安装指导](https://wiki.python.org/moin/BeginnersGuide/Download)已经给出各系统安装方式，根据官网内容安装即可。
 
-### mkdocs 与 material 主题
+### mkdocs、material 主题、插件
 
-mkdocs 与 material 主题均可以通过 [pip](https://pypi.org/project/pip/)（Python的包管理器） 进行安装。
+均可以通过 [pip](https://pypi.org/project/pip/)（Python 的包管理器） 进行安装。
 
 ```bash
 $ pip install mkdocs
 $ pip install mkdocs-material
+$ pip install mkdocs-heti-plugin
 ```
 
-具体地，你可以分别查看[ mkdocs 的安装指导](https://www.mkdocs.org/getting-started/#installation) 与[ material 的安装指导](https://squidfunk.github.io/mkdocs-material/getting-started/#installation)。
+具体地，你可以分别查看 [mkdocs 的安装指导](https://www.mkdocs.org/getting-started/#installation) 与 [material 的安装指导](https://squidfunk.github.io/mkdocs-material/getting-started/#installation)。
 
 ### 本地构建
 
