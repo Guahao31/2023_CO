@@ -8,7 +8,7 @@
 
 《计算机组成与设计》实验主要内容是使用 Verilog 实现一个简单的 32-bit RISC-V CPU Core。
 
-!!! warning "如果你修读的是《计算机组成》，请注意：本文档的内容要多于你的课程要求。"
+!!! warning "如果你修读的是《计算机组成》，请注意：本文档的内容要多于你的课程要求。你可以参考《计算机组成》助教所写的[实验文档](https://artessay.github.io/ZJU-Computer-Organization-Lab-2023/)。"
 
 💡***请在第一次实验课前安装 Vivado，可参考“热身”中“ Vivado 安装”一节。***
 
