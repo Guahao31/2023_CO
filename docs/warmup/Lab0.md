@@ -38,7 +38,7 @@
 
 在开始实验之前，你需要在电脑上配置 `git`, `make`。
 
-* [配置 git](https://www.windows11.pro/5639.html)，如果你之前从未使用过 git，可以查看“其他”中“git 入门”一节。
+* [配置 git](https://www.windows11.pro/5639.html)，如果你之前从未使用过 git，可以查看“其他”中“[git 基础](../../Other/about_git/)”一节。
 * [配置 make](https://tehub.com/a/aCYp1uw0tG)。
 
 配置之后，请新建一个仓库玩耍一下，并建一个“Hello World”工程查看 make 工具是否能够正常使用。
@@ -62,7 +62,7 @@
 
     请你帮助可怜的助教解决这个问题😭，完成实验！
 
-    - 你需要说明：
+    * 你需要说明：
         * 这个 Error 是出在哪个阶段 (Synthesis/Implementation/Generate Bitstream) ？
         * 助教应该怎么做？（请至少给出一种可能的解决方式）
         * 你是通过什么途径了解与解决这个 Error 的？（简单说明即可，参考内容请给出链接）
