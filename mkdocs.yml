@@ -43,6 +43,9 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
+extra_css:
+  - _css/style.css
+
 nav:
   - Home: index.md
   - Warm Up:
