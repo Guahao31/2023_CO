@@ -1,4 +1,6 @@
 site_name: 2023_CO
+site_url: https://guahao31.github.io/2023_CO
+site_author: GNG not Gua
 
 theme:
   name: material
