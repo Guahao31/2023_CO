@@ -8,19 +8,20 @@
 
 ## 如何在本地构建？
 
-本文档使用 [mkdocs](https://www.mkdocs.org/) 构建，并使用了 [material](https://squidfunk.github.io/mkdocs-material/) 第三方主题，你需要在本地依次序安装 [Python](https://python.org)、mkdocs、material 主题。
+本文档使用 [mkdocs](https://www.mkdocs.org/) 构建，并使用了 [material](https://squidfunk.github.io/mkdocs-material/) 第三方主题，你需要在本地依次序安装 [Python](https://python.org)、mkdocs、material 主题、heti 插件。
 
 ### Python 安装
 
 官网[安装指导](https://wiki.python.org/moin/BeginnersGuide/Download)已经给出各系统安装方式，根据官网内容安装即可。
 
-### mkdocs 与 material 主题
+### mkdocs、material 主题、插件
 
-mkdocs 与 material 主题均可以通过 [pip](https://pypi.org/project/pip/)（Python的包管理器） 进行安装。
+均可以通过 [pip](https://pypi.org/project/pip/)（Python的包管理器） 进行安装。
 
 ```bash
 $ pip install mkdocs
 $ pip install mkdocs-material
+$ pip install mkdocs-heti-plugin
 ```
 
 具体地，你可以分别查看[ mkdocs 的安装指导](https://www.mkdocs.org/getting-started/#installation) 与[ material 的安装指导](https://squidfunk.github.io/mkdocs-material/getting-started/#installation)。
