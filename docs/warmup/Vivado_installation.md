@@ -15,3 +15,13 @@
 > 习惯使用 Linux 系统的同学可以安装 Linux 版本，WSL2 也可尝试安装。
 >
 > Vivado 安装路径上不要出现中文和空格。
+
+## FAQ
+
+### 安装找不到 *WebPack* 选项
+
+选择 *Standard* 版本即可。 *Enterprise* 版本需要付费。
+
+### Device 看不到 Kintex-7 选项
+
+展开 *7 Series*，在里面可以找到 K7 板。
