@@ -1,5 +1,7 @@
 # 乘法器
 
+
+## 前置知识
 你需要复习理论课中提到的`multiplier V3`，即
 
 ![Multiplier V3](./pic/multiplier_v3.png)
@@ -11,4 +13,18 @@
 **开始时将“乘数”放在 Product 的低32位**：关注到每一次循环我们都需要对“乘数”进行一次右移操作，同时每一次循环我们都对 Product 进行一次右移且低32位不参与加法计算。
 
 我们需要一个控制逻辑来判断参与加法的是**0**还是**被乘数**，同时需要判断何时停止运算。运算结束的条件很简单，即完成了32次循环，只需要一个计数器即可实现。在我们的算法中，如果乘数的***最低位***是1则给 Product 的高32位加一个被乘数；否则，不需要改变 Product 的值。
+
+## 模块实现
+你的模块端口应为：
+
+```verilog title="multiplier.v"
+module multiplier(
+  input           clk,      // 时钟信号
+//input           start     // 开始运算，不要求实现这个端口
+  input [31:0]    A,        // 两个 32-bit 输入值
+  input [31:0]    B,
+  output          finish,   // 当结束计算时置1，你可能需要将它改为 `output reg`
+  output[63:0]    res       // 64-bit 输出，你可能需要将它修改为 `output reg[63:0]`
+)
+```
 
