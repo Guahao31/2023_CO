@@ -17,6 +17,8 @@
 ## 模块实现
 你的模块端口应为：
 
+<div style="display:none">5LiN5oOz5YaZ5a6e6aqM5oyH5a+85ZWK5ZWK5ZWK5ZWK5ZWK5ZWK5ZWK5ZWK5ZWK77yM6L+ZIHRtZCDlhpnlh7rmnaXkuZ/kuI3mmK/kurror53llYo=</div>
+
 ```verilog title="multiplier.v"
 module multiplier(
   input           clk,      // 时钟信号
