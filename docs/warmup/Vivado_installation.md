@@ -2,6 +2,13 @@
 
 请确保有足够的磁盘容量。（约40GB）
 
+???+ warning "追加"
+    如果使用 webpack 下载经常遇到需要 retry 的情况，你可以在**校网**环境下使用 FTP 获得 2020.2 版本；
+
+    FTP 地址为 ftp://10.78.18.205/
+
+    FTP中有相关指导。为了防止传输中断导致的失败，请使用支持断点续传的 FTP 软件，比如 FileZilla。
+
 💡请选择不低于 **2020.2** 的版本
 
 * 在官网提供的[下载网页](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html)中找到合适的版本(版本号；Windows/Linux)，选择“...Web Installer”（约300MB的文件）。
