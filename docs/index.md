@@ -8,7 +8,7 @@
 
 !!! warning "如果你修读的是《计算机组成》，请注意：本文档的内容要多于你的课程要求。你可以参考《计算机组成》助教所写的[实验文档](https://artessay.github.io/ZJU-Computer-Organization-Lab-2023/)。"
 
-💡***请在第一次实验课前安装 Vivado，可参考“热身”中“ Vivado 安装”一节。***
+💡***请在第一次实验课前安装 Vivado，可参考“热身”中“ [Vivado 安装](./warmup/Vivado_installation/)”一节。***
 
 ## 更新日志
 | 时间 | 内容 |
