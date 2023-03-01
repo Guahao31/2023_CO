@@ -2,6 +2,8 @@
 
 本实验由两部分组成：配置实验环境，使用 Vivado。
 
+!!! tip "**2023.3.1**更新 [Lab0 附件](https://pan.zju.edu.cn/share/d6c6ca8d81cf6d2be5bf6e5246)"
+
 ???+ tips "开始之前"
     * 实验工程的路径不应有中文和空格。
     * 默认掌握了 Verilog 基础并知道如何进行测试。
