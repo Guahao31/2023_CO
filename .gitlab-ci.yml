@@ -1,15 +1,15 @@
+image: python:3.8-bullseye
+
+before_script:
+  - pip install mkdocs mkdocs-material mkdocs-heti-plugin
+
 pages:
-  tags:
-    - pages-builder
   stage: deploy
   script:
-    - pip install mkdocs-heti-plugin 
-    - dummy
-  variables:
-    BUILDER: 'mkdocs'
-    WORKING_DIR: ''
+    - mkdocs build --strict --verbose
   artifacts:
     paths:
       - public
   rules:
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+
