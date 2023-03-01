@@ -65,4 +65,5 @@ nav:
 
   - Other:
     - Git 基础: Other/about_git.md
+    - 在Linux/MacOS 上仿真: Other/Verilog_Simulation_on_MacOS_Linux.md
 
