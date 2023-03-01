@@ -3,6 +3,7 @@ pages:
     - pages-builder
   stage: deploy
   script:
+    - pip install mkdocs-heti-plugin 
     - dummy
   variables:
     BUILDER: 'mkdocs'
