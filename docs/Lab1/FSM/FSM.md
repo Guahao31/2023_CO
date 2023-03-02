@@ -24,16 +24,21 @@ Finite State Machine（FSM，有限状态机）是在有限个状态之间按照
 * 第三段决定输出，根据你的状态转移图，将所有输出为1的状态取或即可，类似于 `assign out = (Q1 == curr_state) || (Q2 == curr_state);`。
 
 ```verilog linenums="1" title="seq.v"
-module seq(...);
+module seq(
+	input clk,
+	input reset,
+	input in,
+	output out
+);
 // State definition
   localparam 
-  	Q1 = ...,
-  	Q2 = ...,
-  	...;
+    Q1 = ...,
+    Q2 = ...,
+    ...;
 
 // First segment: state transfer
   always @(posedge clk or posedge rst) begin
-		...
+        ...
   end
 
 // Sencond segment: transfer condition
