@@ -15,6 +15,9 @@
 我们需要一个控制逻辑来判断参与加法的是**0**还是**被乘数**，同时需要判断何时停止运算。运算结束的条件很简单，即完成了32次循环，只需要一个计数器即可实现。在我们的算法中，如果乘数的***最低位***是1则给 Product 的高32位加一个被乘数；否则，不需要改变 Product 的值。
 
 ## 模块实现
+
+!!! note "报告中需要给出你写出的完整代码。"
+
 你的模块端口应为：
 
 <div style="display:none">5LiN5oOz5YaZ5a6e6aqM5oyH5a+85ZWK5ZWK5ZWK5ZWK5ZWK5ZWK5ZWK5ZWK5ZWK77yM6L+ZIHRtZCDlhpnlh7rmnaXkuZ/kuI3mmK/kurror53llYo=</div>
