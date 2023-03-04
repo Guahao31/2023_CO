@@ -16,14 +16,10 @@
 
 ```bash
 src_0_3_3210101145_王某某.zip/ # 用一个zip打包源代码
-├── Lab1 # 本实验要求提供的源代码文件
-│   ├── ALU.v # ALU 部分
-│   ├── ALU_tb.v
-│   ├── Regs.v # RegFile 部分
-│   ├── Regs_tb.v
-│   ├── seq.v # FSM 部分
-│   └── seq_moore_tb.v
+├── Lab1
 ├── Lab2
 └── Lab3
+    ├── divider.v # 除法器，如果你实现了多种，可以编号 divider_0 等
+    └── multiplier.v # 乘法器，如果实现多种同上编号
 report_0_3_3210101145_王某某.pdf # 你的实验报告，Lab0-3合成一份，注意提交PDF格式
 ```
