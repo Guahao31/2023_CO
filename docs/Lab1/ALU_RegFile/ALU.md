@@ -18,7 +18,7 @@ ALU (Arithmetic Logic Unit) 是负责对二进制整数进行算术运算和位�
 module ALU (
   input [31:0]  A,
   input [31:0]  B,
-  input [2:0]   ALU_operation,
+  input [2:0]   ALU_operation, // 也可以直接写为 wire [3:0]，请见下文 2023.3.5 更新
   output[31:0]  res,
   output        zero
 );
@@ -26,6 +26,25 @@ module ALU (
 
 endmodule
 ```
+
+???+ tip "**2023.3.5**更新：对于 `ALU_operation` 的解释"
+    本次实验的 ALU 实现的功能并不足以在之后的实验中直接使用，在之后的实验中，你要实现的完整操作如下：
+
+    | 操作 | ALU_operation 值 |
+    | --- | :------------------------------------ |
+    | ADD | 4'd0 |
+    | SUB | 4'd1 |
+    | SLL | 4'd2 |
+    | SLT | 4'd3 |
+    | SLTU | 4'd4 |
+    | XOR | 4'd5 |
+    | SRL | 4'd6 |
+    | SRA | 4'd7 |
+    | OR | 4'd8 |
+    | AND | 4'd9 |
+
+    本次实验中，你只需要实现 ADD, SUB, XOR, SRL, OR, AND 指令；也可以一次到位，直接将 `ALU_operation` 拓展为4位并实现全部指令，这对你本实验的实验分数没有任何影响。
+
 
 ## 仿真测试
 

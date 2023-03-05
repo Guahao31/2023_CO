@@ -16,6 +16,7 @@
 
 | 时间 | 内容 |
 | --- | :------------------------------------ |
+| 2023.3.5 | [Update] Lab1 ALU_operation 补充 |
 | 2023.3.4 | [Update] Lab2 添加下板要求 |
 | 2023.3.3 | [Release] Lab2 |
 | 2023.3.1 | [Update] Lab0 报告要求 <br> [Release] Lab1 |
