@@ -25,11 +25,14 @@
 ```verilog title="multiplier.v"
 module multiplier(
   input           clk,      // 时钟信号
-//input           start     // 开始运算，不要求实现这个端口
+  input           start     // 开始运算
   input [31:0]    A,        // 两个 32-bit 输入值
   input [31:0]    B,
   output          finish,   // 当结束计算时置1，你可能需要将它改为 `output reg`
   output[63:0]    res       // 64-bit 输出，你可能需要将它修改为 `output reg[63:0]`
-)
+);
 ```
 
+!!! tip "这里提供一个可以选择的 [starter code](./attachment/multiplier_signed_starter.v)，你可以根据自己的想法任意地进行修改（只要不改变模块名与端口名）。"
+
+实验对与乘法器的基本要求是**有符号，无溢出判断**；如果实现的是*无符号，无溢出判断*的乘法器，将无法获得本实验的全部分数。
