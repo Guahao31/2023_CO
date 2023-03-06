@@ -41,3 +41,14 @@ module multiplier(
 
 !!! note "报告中需要给出 testbench 代码，测试波形与解释（波形截图需要保证缩放与变量数制合适）。"
 
+附件中的 [multiplier_tb.v](./attachment/multiplier_tb.v) 已经给出了一个简单的仿真代码，你可以在此基础上进行修改（与添加）或自行书写一个合适的仿真代码。
+
+你的仿真波形应该类似于以下两张图片：
+
+*无符号，无溢出判断*
+
+![unsigned](./pic/multiplier_unsigned.png)
+
+*有符号，无溢出判断*
+
+![signed](./pic/multiplier_signed.png)
