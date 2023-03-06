@@ -1,6 +1,8 @@
 # Lab3
 
-!!! danger "本实验并未 release，内容随时都会变化。个人水平有限，如您发现文档中的疏漏欢迎 Issue！"
+<!-- !!! danger "本实验并未 release，内容随时都会变化。个人水平有限，如您发现文档中的疏漏欢迎 Issue！" -->
+
+!!! tip "[Lab3 附件](https://pan.zju.edu.cn/share/fcf9e3f17e35887d2d20394fd4)"
 
 本次实验内容为乘除法器。
 
