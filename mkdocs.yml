@@ -66,6 +66,7 @@ nav:
     - Divider: Lab3/divider.md
   - Lab4:
     - Lab4/Lab4.md
+    - DataPath & CtrlUnit: Lab4/DataPath_CtrlUnit.md
 
   - Other:
     - Git 基础: Other/about_git.md
