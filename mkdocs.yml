@@ -64,8 +64,11 @@ nav:
     - Lab3/Lab3.md
     - Multiplier: Lab3/multiplier.md
     - Divider: Lab3/divider.md
+  - Lab4:
+    - Lab4/Lab4.md
 
   - Other:
     - Git 基础: Other/about_git.md
     - 在Linux/MacOS 上仿真: Other/Verilog_Simulation_on_MacOS_Linux.md
+    - RISC-V 32I: Other/RISC_V.md
 
