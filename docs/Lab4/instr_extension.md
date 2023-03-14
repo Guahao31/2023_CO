@@ -5,4 +5,16 @@
 !!! warning "在开始本实验之前，请备份Lab4-1与Lab4-2的所有工程，包括你使用的 IP Core。"
     你可以使用 git 保存之前的所有进度，并开新的分支来完成 Lab4-3。
 
-在之前的实验中，我们完成了
+在之前的实验中，我们完成了基本的指令，本节实验要在 Lab4-1 & Lab4-2 的基础之上拓展指令。
+
+!!! tip "在本节实验中，你需要实现以下指令："
+
+    * R-Type: add, sub, and, or, xor, slt, srl, **sll**, **sra**, **sltu**
+    * I-Type: addi, andi, ori, xori, slti, srli, **slli**, **srai**, **slti**, **sltiu**, **lb**, **lh**, lw, **lbu**, **lhu**, **jalr**
+    * S-Type: **sb**, **sh**, sw
+    * B-Type: beq, **bne**, **blt**, **bge**, **bltu**, **bgeu**
+    * J-Type: jal
+    * **U-Type**: **lui**, **auipc**
+
+    即 [RISC-V 32I](../Other/RISC_V.md) 中除了 `ecall, ebreak` 外的所有指令，黑体标出的指令为新添加的指令。在开始实验之前，请保证你理解了所有的指令含义与类型。
+
