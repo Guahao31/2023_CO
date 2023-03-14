@@ -67,6 +67,7 @@ nav:
   - Lab4:
     - Lab4/Lab4.md
     - DataPath & CtrlUnit: Lab4/DataPath_CtrlUnit.md
+    - Instruction Extension: Lab4/instr_extension.md
 
   - Other:
     - Git 基础: Other/about_git.md
