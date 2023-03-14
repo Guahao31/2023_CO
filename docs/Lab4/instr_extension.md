@@ -18,3 +18,27 @@
 
     即 [RISC-V 32I](../Other/RISC_V.md) 中除了 `ecall, ebreak` 外的所有指令，黑体标出的指令为新添加的指令。在开始实验之前，请保证你理解了所有的指令含义与类型。
 
+你可以在 [venus](http://venus.cs61c.org/) 上使用以下代码来理解 `sb, sh` 的含义：
+
+=== "sh"
+
+    ```
+    addi x11, x0, 0x421
+    lui x10, 0x33333
+    addi x10, x10, 0x333
+    sw x10, 48(zero)
+    sh x11, 49(zero)
+    add zero, zero, zero
+    ```
+=== "sb"
+
+    ```
+    addi x11, x0, 0x22
+    addi x10, x0, 0x20
+    lui x9, 0x33333
+    addi x9, x9, 0x333
+    sw x9,48(zero)
+    sb x11, 49(zero)
+    sb x10, 50(zero)
+    add zero, zero, zero
+    ```
