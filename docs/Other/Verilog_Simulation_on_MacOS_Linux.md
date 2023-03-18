@@ -1,4 +1,4 @@
-# Verilog仿真(MacOS/Linux)
+# Verilog 仿真(Linux/macOS)
 
 !!! warning "主要是给数逻时没有 Windows 本的同学，对计组实验来说帮助不大（无法使用 IP Core）"
 
