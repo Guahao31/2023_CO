@@ -65,6 +65,7 @@ nav:
     - Lab3/Lab3.md
     - Multiplier: Lab3/multiplier.md
     - Divider: Lab3/divider.md
+    - Floating Point Adder: Lab3/floating_point_adder.md
   - Lab4:
     - Lab4/Lab4.md
     - DataPath & CtrlUnit: Lab4/DataPath_CtrlUnit.md
