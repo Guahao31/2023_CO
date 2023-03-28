@@ -70,7 +70,7 @@ module SCPU_ctrl(
   output reg        Branch,
   output reg        RegWrite,
   output reg        MemRW,
-  output reg [2:0]  ALU_Control,
+  output reg [3:0]  ALU_Control,
   output reg        CPU_MIO
 );
 
