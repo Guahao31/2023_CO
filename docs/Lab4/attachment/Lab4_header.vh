@@ -70,6 +70,16 @@
 `define FUNC_GEU        3'd7
 /*-----------------------------------*/
 
+/* ImmSel signals */
+// NOTE: You may add terms in Lab4-3 to implement more inst.
+`define IMM_SEL_WIDTH 2
+
+`define IMM_SEL_I   `IMM_SEL_WIDTH'd0
+`define IMM_SEL_S   `IMM_SEL_WIDTH'd1
+`define IMM_SEL_B   `IMM_SEL_WIDTH'd2
+`define IMM_SEL_J   `IMM_SEL_WIDTH'd3
+/*-----------------------------------*/
+
 /*----------------------------*/
 /******* generated code *******/
 /*----------------------------*/
