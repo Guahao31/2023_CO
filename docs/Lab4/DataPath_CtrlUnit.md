@@ -1,6 +1,6 @@
 # Lab4-1 & Lab4-2
 
-!!! danger "本实验并未 release，内容随时都会变化。个人水平有限，如您发现文档中的疏漏欢迎 Issue！"
+<!-- !!! danger "本实验并未 release，内容随时都会变化。个人水平有限，如您发现文档中的疏漏欢迎 Issue！" -->
 
 !!! warning "你可以使用 git 来记录实验过程，创建新的分支完成本节，可以参考 [git 基础](../Other/about_git.md)小节。"
 
