@@ -4,7 +4,7 @@
 
 本文档面向对象为 2022-2023 春夏《计算机组成与设计》**刘海风老师**班，如果你修读的是《计算机组成》，可以查看 [@Artessay](https://github.com/artessay) 所写的[实验文档](https://artessay.github.io/ZJU-Computer-Organization-Lab-2023/#/)。
 
-感谢 [@NonoHh](https://github.com/NonoHh) 和 [@Artessay](https://github.com/artessay) 学长的指导与建议！
+感谢 [@NonoHh](https://github.com/NonoHh) 和 [@Artessay](https://github.com/artessay) 学长的指导与建议！感谢 [@鹤翔万里](https://github.com/TonyCrane) 对文档结构和排版的修改！同时感谢提出文档错误的同学：[@HobbitQia](https://github.com/HobbitQia)！
 
 ## 如何在本地构建？
 
