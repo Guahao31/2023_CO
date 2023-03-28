@@ -28,7 +28,66 @@
 
 在分别完成 DataPath 和 CtrlUnit 两部分后，将 Lab4-0 中的 IP Core 替换，**得到自行实现的 SCPU**。
 
+### 立即数生成器
+
+请保证模块名与端口名和以下代码完全相同（虽然混用下划线和驼峰命名很让人抓狂，但 slides 上边给的如此且大部分同学与之相同，就按照这种命名吧💦）
+```verilog title="ImmGen.v"
+module ImmGen(
+  input [1:0]   ImmSel,
+  input [31:0]  inst_field,
+  output[31:0]  Imm_out
+);
+```
+
+请保证 `ImmSel` 的意义与下同（参考附件 `Lab4_header.vh`）
+
+```verilog
+/* ImmSel signals */
+// NOTE: You may add terms in Lab4-3 to implement more inst.
+`define IMM_SEL_WIDTH 2
+
+`define IMM_SEL_I   `IMM_SEL_WIDTH'd0
+`define IMM_SEL_S   `IMM_SEL_WIDTH'd1
+`define IMM_SEL_B   `IMM_SEL_WIDTH'd2
+`define IMM_SEL_J   `IMM_SEL_WIDTH'd3
+/*-----------------------------------*/
+```
+
+### SCPU_ctrl
+
+请保证模块名与端口名和以下代码完全相同
+
+```verilog title="SCPU_ctrl.v"
+module SCPU_ctrl(
+  input [4:0]       OPcode,
+  input [2:0]       Fun3,
+  input             Fun7,
+  input             MIO_ready,
+  output reg [1:0]  ImmSel,
+  output reg        ALUSrc_B,
+  output reg        MemtoReg,
+  output reg        Jump,
+  output reg        Branch,
+  output reg        RegWrite,
+  output reg        MemRW,
+  output reg [2:0]  ALU_Control,
+  output reg        CPU_MIO
+);
+
+endmodule
+```
+
 ## 仿真测试
+
+!!! tip "关于立即数生成器的仿真测试"
+    
+    你的代码将在助教本地进行验证，使用的仿真激励文件为 [ImmGen_tb.v](./attachment/ImmGen_tb.v)，你可以自行进行验证，以免有错误产生扣分。正确的参考波形可以查看[标准波形文件](./attachment/ImmGen.vcd)。
+
+    为了方便自行检查，你可以在 [test.s](./attachment/test.s) 编写更多的仿真代码，通过 [Venus](https://venus.cs61c.org/) 平台获得十六进制文件并更名为 `console.out`，使用 [ImmGen_tb_gen.py](./attachment/ImmGen_tb_gen.py) 获得要填写进仿真激励文件的代码。这一段 Python 代码非常简单，请自行查看文件命名与含义。当然，你也可以使用其他方式获得测试代码，这里仅作示例，以后不再提供类似文件。
+
+`SCPU_ctrl` 模块也将采取类似的仿真测试，在 Lab4 开放之前将补充在这里。
+
+### SCPU
 
 为了方便测试，我们需要搭建一个简单的仅包含 SCPU 以及 Mem(IMem & DMem) 的测试平台。
 
