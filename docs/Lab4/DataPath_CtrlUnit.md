@@ -85,7 +85,7 @@ endmodule
 
     为了方便自行检查，你可以在 [test.s](./attachment/test.s) 编写更多的仿真代码，通过 [Venus](https://venus.cs61c.org/) 平台获得十六进制文件并更名为 `console.out`，使用 [ImmGen_tb_gen.py](./attachment/ImmGen_tb_gen.py) 获得要填写进仿真激励文件的代码。这一段 Python 代码非常简单，请自行查看文件命名与含义。当然，你也可以使用其他方式获得测试代码，这里仅作示例，以后不再提供类似文件。
 
-`SCPU_ctrl` 模块也将采取类似的仿真测试，在 Lab4 开放之前将补充在这里。
+`SCPU_ctrl` 模块也将采取类似的仿真测试，助教将使用 [SCPU_ctrl_tb.v](./attachment/SCPU_ctrl_tb.v) 对你的模块进行测试，可以使用该文件自行测试，以免有错误产生扣分。
 
 ### SCPU
 
