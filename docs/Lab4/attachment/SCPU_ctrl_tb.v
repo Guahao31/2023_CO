@@ -33,10 +33,13 @@ module SCPU_ctrl_tb();
     .CPU_MIO(CPU_MIO)
   );
 
+  reg [31:0] inst_for_test;
+
 `define LET_INST_BE(inst) \
-  OPcode = inst[6:0]; \
-  Fun3 = inst[14:12]; \
-  Fun7 = inst[30]; \
+  inst_for_test = inst; \
+  OPcode = inst_for_test[6:2]; \
+  Fun3 = inst_for_test[14:12]; \
+  Fun7 = inst_for_test[30]; \
   #5;
 
   initial begin
