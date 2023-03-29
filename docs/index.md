@@ -22,6 +22,7 @@
 
 | 时间 | 内容 |
 | --- | :------------------------------------ |
+| 2023.3.29 | [Fix] Lab4: SCPU_ctrl_tb.v |
 | 2023.3.28 | [Update] Lab4 4.1&4.2 仿真要求与标准测试文件/波形文件 <br> [Update] Lab4 附件 Lab4_header.v <br> [Release] Lab4-1&4-2 |
 | 2023.3.18 | [Update] Lab3 浮点加法器要求 |
 | 2023.3.14 | [Fix] Lab1: FSM 思考题 Hint |
