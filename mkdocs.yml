@@ -73,6 +73,6 @@ nav:
 
   - Other:
     - Git 基础: Other/about_git.md
-    - 在Linux/macOS 上仿真: Other/Verilog_Simulation_on_macOS_Linux.md
+    - 在Linux/macOS 上仿真: Other/Verilog_Simulation.md
     - RISC-V 32I: Other/RISC_V.md
 
