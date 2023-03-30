@@ -160,7 +160,7 @@ endmodule
         reg clk;
         reg rst;
 
-        testbench(.clk(clk), .rst(rst));
+        testbench m0(.clk(clk), .rst(rst));
 
         initial begin
             clk = 1'b0;
