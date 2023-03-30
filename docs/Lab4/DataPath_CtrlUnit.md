@@ -77,6 +77,18 @@ module SCPU_ctrl(
 endmodule
 ```
 
+请保证 `MemtoReg` 的意义与下同（参考附件 `Lab4_header.vh`）
+```verilog
+/* Mem2Reg signals */
+// NOTE: You may add terms in Lab4-3 to implement more inst.
+`define MEM2REG_WIDTH 2
+
+`define MEM2REG_ALU         `MEM2REG_WIDTH'd0
+`define MEM2REG_MEM         `MEM2REG_WIDTH'd1
+`define MEM2REG_PC_PLUS     `MEM2REG_WIDTH'd2
+/*-----------------------------------*/
+```
+
 ## 仿真测试
 
 !!! tip "关于立即数生成器的仿真测试"
