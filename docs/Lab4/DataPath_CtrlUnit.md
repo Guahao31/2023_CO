@@ -65,7 +65,7 @@ module SCPU_ctrl(
   input             MIO_ready,
   output reg [1:0]  ImmSel,
   output reg        ALUSrc_B,
-  output reg        MemtoReg,
+  output reg [1:0]  MemtoReg,
   output reg        Jump,
   output reg        Branch,
   output reg        RegWrite,
@@ -128,7 +128,7 @@ endmodule
         RAM_B u1(
             .clka(~clk),
             .wea(MemRW),
-            .addra(Addr_out[11:2]);
+            .addra(Addr_out[11:2]),
             .dina(Data_out),
             .douta(douta)
         );

@@ -9,7 +9,7 @@ module SCPU_ctrl_tb();
   reg           MIO_ready;
   wire [1:0]    ImmSel;
   wire          ALUSrc_B;
-  wire          MemtoReg;
+  wire [1: 0]   MemtoReg;
   wire          Jump;
   wire          Branch;
   wire          RegWrite;

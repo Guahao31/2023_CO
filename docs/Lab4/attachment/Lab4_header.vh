@@ -80,6 +80,15 @@
 `define IMM_SEL_J   `IMM_SEL_WIDTH'd3
 /*-----------------------------------*/
 
+/* Mem2Reg signals */
+// NOTE: You may add terms in Lab4-3 to implement more inst.
+`define MEM2REG_WIDTH 2
+
+`define MEM2REG_ALU         `MEM2REG_WIDTH'd0
+`define MEM2REG_MEM         `MEM2REG_WIDTH'd1
+`define MEM2REG_PC_PLUS     `MEM2REG_WIDTH'd2
+/*-----------------------------------*/
+
 /*----------------------------*/
 /******* generated code *******/
 /*----------------------------*/
