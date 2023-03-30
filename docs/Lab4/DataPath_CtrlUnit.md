@@ -128,7 +128,7 @@ endmodule
         RAM_B u1(
             .clka(~clk),
             .wea(MemRW),
-            .addra(PC_out[11:2]);
+            .addra(Addr_out[11:2]);
             .dina(Data_out),
             .douta(douta)
         );
