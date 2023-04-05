@@ -306,3 +306,96 @@
     .t6 (Reg31),
 
 `endif // YOUR_REGS
+
+`define VGA_Debug_Signals_Inputs \
+    input [31:0] pc, \
+    input [31:0] inst, \
+    input [4:0] rs1, \
+    input [31:0] rs1_val, \
+    input [4:0] rs2, \
+    input [31:0] rs2_val, \
+    input [4:0] rd, \
+    input [31:0] reg_i_data, \
+    input reg_wen, \
+    input is_imm, \
+    input is_auipc, \
+    input is_lui, \
+    input [31:0] imm, \
+    input [31:0] a_val, \
+    input [31:0] b_val, \
+    input [3:0] alu_ctrl, \
+    input [2:0] cmp_ctrl, \
+    input [31:0] alu_res, \
+    input cmp_res, \
+    input is_branch, \
+    input is_jal, \
+    input is_jalr, \
+    input do_branch, \
+    input [31:0] pc_branch, \
+    input mem_wen, \
+    input mem_ren, \
+    input [31:0] dmem_o_data, \
+    input [31:0] dmem_i_data, \
+    input [31:0] dmem_addr,
+
+`define VGA_Debug_Signals_Arguments \
+    .pc(pc), \
+    .inst(inst), \
+    .rs1(rs1), \
+    .rs1_val(rs1_val), \
+    .rs2(rs2), \
+    .rs2_val(rs2_val), \
+    .rd(rd), \
+    .reg_i_data(reg_i_data), \
+    .reg_wen(reg_wen), \
+    .is_imm(is_imm), \
+    .is_auipc(is_auipc), \
+    .is_lui(is_lui), \
+    .imm(imm), \
+    .a_val(a_val), \
+    .b_val(b_val), \
+    .alu_ctrl(alu_ctrl), \
+    .cmp_ctrl(cmp_ctrl), \
+    .alu_res(alu_res), \
+    .cmp_res(cmp_res), \
+    .is_branch(is_branch), \
+    .is_jal(is_jal), \
+    .is_jalr(is_jalr), \
+    .do_branch(do_branch), \
+    .pc_branch(pc_branch), \
+    .mem_wen(mem_wen), \
+    .mem_ren(mem_ren), \
+    .dmem_o_data(dmem_o_data), \
+    .dmem_i_data(dmem_i_data), \
+    .dmem_addr(dmem_addr),
+
+`define VGA_Debug_Signals_Outputs \
+    output [31:0] pc, \
+    output [31:0] inst, \
+    output [4:0] rs1, \
+    output [31:0] rs1_val, \
+    output [4:0] rs2, \
+    output [31:0] rs2_val, \
+    output [4:0] rd, \
+    output [31:0] reg_i_data, \
+    output reg_wen, \
+    output is_imm, \
+    output is_auipc, \
+    output is_lui, \
+    output [31:0] imm, \
+    output [31:0] a_val, \
+    output [31:0] b_val, \
+    output [3:0] alu_ctrl, \
+    output [2:0] cmp_ctrl, \
+    output [31:0] alu_res, \
+    output cmp_res, \
+    output is_branch, \
+    output is_jal, \
+    output is_jalr, \
+    output do_branch, \
+    output [31:0] pc_branch, \
+    output mem_wen, \
+    output mem_ren, \
+    output [31:0] dmem_o_data, \
+    output [31:0] dmem_i_data, \
+    output [31:0] dmem_addr,
