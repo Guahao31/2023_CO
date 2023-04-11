@@ -22,7 +22,7 @@
 
 | 时间 | 内容 |
 | --- | :------------------------------------ |
-| 2023.4.11 | [Fix] Lab4-3 验收代码 |
+| 2023.4.11 | [Fix] Lab4-3 验收代码 <br> [Release] Lab4-3 |
 | 2023.4.4 | [Update] Lab4 headerfile 增加 VGA Debug 信号相关 |
 | 2023.3.29 | [Fix] Lab4: SCPU_ctrl_tb.v |
 | 2023.3.28 | [Update] Lab4 4.1&4.2 仿真要求与标准测试文件/波形文件 <br> [Update] Lab4 附件 Lab4_header.v <br> [Release] Lab4-1&4-2 |
