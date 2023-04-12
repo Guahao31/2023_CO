@@ -6,6 +6,8 @@
 
 感谢 [@NonoHh](https://github.com/NonoHh) 和 [@Artessay](https://github.com/artessay) 学长的指导与建议！感谢 [@鹤翔万里](https://github.com/TonyCrane) 对文档结构和排版的修改！同时感谢提出文档错误的同学：[@HobbitQia](https://github.com/HobbitQia)！
 
+本文档的部分内容和思考题借鉴了《计算机系统》系列课程的实验文档，你可以在他们的 [ZJU git 主页](https://git.zju.edu.cn/zju-sys)上查看相关内容，非常感谢《计算机系统》课程老师与历届助教在课程建设上的努力！
+
 ## 如何在本地构建？
 
 本文档使用 [mkdocs](https://www.mkdocs.org/) 构建，并使用了 [material](https://squidfunk.github.io/mkdocs-material/) 第三方主题，你需要在本地依次序安装 [Python](https://python.org)、mkdocs、material 主题、heti 插件。
