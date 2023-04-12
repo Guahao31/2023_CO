@@ -60,9 +60,9 @@
 ## 下板验证
 
 ??? tip "验收代码"
-    === "test_4_3.s"
+    === "test_4_3.s" 
 
-        ```
+        ``` linenums="1" 
         auipc x26, 0x40
         auipc x27, 0x80
         srli x27, x27, 3

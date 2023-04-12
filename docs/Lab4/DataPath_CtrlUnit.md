@@ -186,7 +186,7 @@ endmodule
 
     === "test.s"
 
-        ```
+        ``` linenums="1" 
         jal zero, start # 0
         add zero, zero, zero # 4
         add zero, zero, zero # 8
