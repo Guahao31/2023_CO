@@ -36,8 +36,16 @@ exception or an interrupt.
     * 本次实验允许你自由的设计 Exception Code 的含义，在实验报告中说明即可。
 * **mtval**： Machine Trap Value Register，存储异常的相关信息以帮助软件处理异常，曾称 mbadaddr。
     * ![](./pic/mtval.png)
-    * 在本次实验中没有用到，可以不进行实现，除非你希望完成存储器访问异常（本节实验的 bonus 内容）。
+    * 在本次实验中没有用到，可以不进行实现，除非你希望完成存储器访问异常（本节实验的 **bonus** 内容）。
 * **mepc**： Machine Exception Program Counter，存储 trap 触发时将要执行的指令地址，在 `mret` 时作为返回地址。
     * ![](./pic/mepc.png)
     * 本次实验不涉及 PC 非对齐异常，因此不需要考虑将跳转指令的目标地址送入 `mepc` 的情况。
-    * 需要注意的是，你需要在 trap 处理程序中检查 `mcause` 寄存器，如果是异常则更新 `mepc <- mepc + 4`。注意：这部分不是你的硬件实现，而是由软件（你的 trap 处理程序）进行管理的。
+    * 需要注意的是，在一般的实现中，你需要在 trap 处理程序中检查 `mcause` 寄存器，如果是异常则更新 `mepc <- mepc + 4`，这部分不是你的硬件实现，而是由软件（你的 trap 处理程序）进行管理的。**但是**，本次实验并不要求实现 `csrw` 等指令，因此我们要在 `RV_INT` 模块中直接管理 `mepc`，即触发 trap 时直接根据触发信号（是不是 `INT`）来决定 `mepc <- pc` 还是 `mepc <- pc+4`。
+
+### trap
+
+进入 trap 时，硬件需要负责修改若干 CSR 并将 PC 调整为 trap 处理程序的第一条指令位置（保存在 `mtvec` 中）。
+
+* 更新 `mcause`，记录当前是不是中断，并记录 exception-code。
+* 更新 `mstatus`，防止在 trap 处理时又触发中断。
+* 更新 `mepc`，记录当前指令的地址。再次提醒，本实验中硬件 `RV_INT` 模块将直接管理 `mepc` 是否自增，如果触发的原因是中断，则 `mepc <- pc`，否则 `mepc <- pc+4`。
