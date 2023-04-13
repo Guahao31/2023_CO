@@ -22,5 +22,22 @@ exception or an interrupt.
 
 对于每个 CSR 的详细介绍，请查看 [Volume II: RISC-V Privileged Architectures V20211203](./attachment/riscv-privileged-20211203.pdf)，这里仅对我们本次实验需要用到的 CSRs 进行简介：
 
+
+* **mstatus**： Machine Status Register，存储当前控制状态。
+    * ![](./pic/mstatus.png)
+    * 本次实验中你可以做相对简化，只要可以保证在中断处理过程中不会触发新的中断即可。
+* **mtvec**： Machine Trap-Vector Base-Address Register，存储中断向量表基地址。
+    * ![](./pic/mtvec.png)
+    * 低两位记录跳转模式，`0` 为 Direct 模式，即所有 trap 都先进入 `BASE`；`1` 为 Vectored 模式，将进入 `BASE + 4*cause`。高位记录的是 `BASE` 的值（请注意对齐，`BASE << 2` 才是真正要跳转的地址）。
+    * 本次实验中，你可以从以上两种模式中自由选择，这将决定你如何书写 trap 处理代码。
 * **mcause**： Machine Cause Register，存储引起这次 trap 的原因。
-    * 
+    * ![](./pic/mcause.png)
+    * 如果进入 trap 的原因是中断，则最高位 interrupt bit 设置为 1。
+    * 本次实验允许你自由的设计 Exception Code 的含义，在实验报告中说明即可。
+* **mtval**： Machine Trap Value Register，存储异常的相关信息以帮助软件处理异常，曾称 mbadaddr。
+    * ![](./pic/mtval.png)
+    * 在本次实验中没有用到，可以不进行实现，除非你希望完成存储器访问异常（本节实验的 bonus 内容）。
+* **mepc**： Machine Exception Program Counter，存储 trap 触发时将要执行的指令地址，在 `mret` 时作为返回地址。
+    * ![](./pic/mepc.png)
+    * 本次实验不涉及 PC 非对齐异常，因此不需要考虑将跳转指令的目标地址送入 `mepc` 的情况。
+    * 需要注意的是，你需要在 trap 处理程序中检查 `mcause` 寄存器，如果是异常则更新 `mepc <- mepc + 4`。注意：这部分不是你的硬件实现，而是由软件（你的 trap 处理程序）进行管理的。
