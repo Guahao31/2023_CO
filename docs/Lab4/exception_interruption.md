@@ -18,7 +18,7 @@ exception or an interrupt.
 
 ### Control and Status Registers(CSRs)
 
-在 32 个通用寄存器之外（即 `x0 - x31`），还有若干*控制状态寄存器*(Control and Status Register, CSR)。在我们的实验中，CPU 始终运行在 Machine Mode 下，在本实验中我们只需要关注 Machine Mode 下的 CSR。
+在 32 个通用寄存器之外（即 `x0 - x31`），还有若干*控制状态寄存器*(Control and Status Register, CSR)。在我们的实验中，CPU 始终运行在 Machine Mode 下，在本实验中我们只需要关注 Machine Mode 下的部分 CSR。
 
 对于每个 CSR 的详细介绍，请查看 [Volume II: RISC-V Privileged Architectures V20211203](./attachment/riscv-privileged-20211203.pdf)，这里仅对我们本次实验需要用到的 CSRs 进行简介：
 
@@ -49,3 +49,28 @@ exception or an interrupt.
 * 更新 `mcause`，记录当前是不是中断，并记录 exception-code。
 * 更新 `mstatus`，防止在 trap 处理时又触发中断。
 * 更新 `mepc`，记录当前指令的地址。再次提醒，本实验中硬件 `RV_INT` 模块将直接管理 `mepc` 是否自增，如果触发的原因是中断，则 `mepc <- pc`，否则 `mepc <- pc+4`。
+
+## 模块实现
+
+本实验需要修改硬件（添加 `RV_INT` 模块，修改 Datapath）以及软件（修改验收代码，实现 trap 处理）。本节主要是 `RV_INT` 模块的简介。
+
+中断处理主要是改变了**指令流**，由正常的指令运行切换到 trap 处理程序的执行，最终回到正常的指令流中继续执行。为此，我们需要设计一个模块，用来接收控制信号或外部信号，判断下一条要执行的指令是正常指令流运行还是 trap 处理的指令；同时，还需要修改 Datapath 以支持 PC 来源的改变。
+
+```verilog title="RV_INT.v" linenums="1"
+module RV_INT(
+  input       clk,
+  input       rst,
+  input       INT,          // 外部中断信号
+  input       ecall,        // ECALL 指令
+  input       mret,         // MRET 指令
+  input       illegal_inst, // 非法指令信号
+  input [31:0] pc_next,     // 正常指令流
+  output[31:0] pc           // 将执行的指令 PC 值
+);
+```
+
+这一模块中，你需要保存并管理 `mstatus, mtvec, mcause, mtval, mepc` 等 CSRs。实现模块时，需要时刻注意：
+
+* 如果正在进行 trap 处理程序（还未执行 `mret`），不接受其他 trap。
+* 根据不同的中断信号，对 CSRs 进行修改，再次提醒，我们的简单实现中，需要硬件对 `mepc` 的具体取值进行管理。
+* 请注意设置 CSRs 的初始值，并注意 `rst` 时恢复初始值。
