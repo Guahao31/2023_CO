@@ -126,7 +126,7 @@ module SSeg_map(
 
    assign Seg_map = {
       Disp_num[0],  Disp_num[4], Disp_num[16], Disp_num[25], 
-      Disp_num[17], Disp_num[5], Disp_num[12], Disp_num[24], 							 
+      Disp_num[17], Disp_num[5], Disp_num[12], Disp_num[24],
       Disp_num[1],  Disp_num[6], Disp_num[18], Disp_num[27], 
       Disp_num[19], Disp_num[7], Disp_num[13], Disp_num[26], 
       Disp_num[2],  Disp_num[8], Disp_num[20], Disp_num[29], 
@@ -136,7 +136,7 @@ module SSeg_map(
       
       // Copied right part
       Disp_num[0],  Disp_num[4], Disp_num[16], Disp_num[25], 
-      Disp_num[17], Disp_num[5], Disp_num[12], Disp_num[24], 							 
+      Disp_num[17], Disp_num[5], Disp_num[12], Disp_num[24], 
       Disp_num[1],  Disp_num[6], Disp_num[18], Disp_num[27], 
       Disp_num[19], Disp_num[7], Disp_num[13], Disp_num[26], 
       Disp_num[2],  Disp_num[8], Disp_num[20], Disp_num[29], 
@@ -156,3 +156,21 @@ endmodule
 这一步中，你需要得到希望打印三种 trap 的图形的 `Disp_num` 值。你需要查看验收代码，学习如何将这个值送入七段数码管最终显示一个图形。
 
 请注意，在每个处理程序的末尾，你需要一个 `mret` 指令告知 `RV_INT` 模块中断处理已经结束，需要恢复正常的指令流并对必要的 CSR 进行修改。
+
+## Lab4 思考题
+
+这么重要的实验怎么能没有
+
+!!! question "思考题(呢？)"
+    * 在涉及到一个大立即数的读入时，我们经常能想到使用 `lui & addi` 来实现，比如下面这段代码就将 `0x22223333` 赋给了 `t0`:
+    ```
+    lui t0, 0x22223
+    addi t0, t0, 0x333
+    ```
+    你是否能通过以下代码得到 `0xDEADBEEF`？如果你觉得不能的话，先解释为什么不能，再修改代码中的**一个字符**，使得以下代码有效地得到 `0xDEADBEEF`。（如果你觉得可以的话，请重新学习 [RISC-V ISA](./attachment/riscv-spec-20191213.pdf)）
+    ```
+    lui t1, 0xDEADB
+    addi t1, t1, 0xEEF
+    ```
+    btw, 如果你把上边代码放到 Venus 上，会发现它给了你一个报错，不要理会它，它理解错了。
+    * 之前我们一直在说，如果 trap 的诱因是 `Exception` 则需要 `mepc <- PC+4`，如果是 `Interruption` 则需要 `mepc <- PC`。这是为什么呢？或者说，如果 `Exception` 时进行 `mepc <- PC`，`Interruption` 时 `mepc <- PC+4` 会有什么不幸的后果？
