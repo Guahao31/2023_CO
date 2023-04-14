@@ -29,7 +29,7 @@ exception or an interrupt.
 * **mtvec**： Machine Trap-Vector Base-Address Register，存储中断向量表基地址。
     * ![](./pic/mtvec.png)
     * 低两位记录跳转模式，`0` 为 Direct 模式，即所有 trap 都先进入 `BASE`；`1` 为 Vectored 模式，将进入 `BASE + 4*cause`。高位记录的是 `BASE` 的值（请注意对齐，`BASE << 2` 才是真正要跳转的地址）。
-    * 本次实验中，你可以从以上两种模式中自由选择，这将决定你如何书写 trap 处理代码。
+    * 本次实验中，要求使用 Vectored 模式，因为我们并没有要求实现 `csrr` 等指令。
 * **mcause**： Machine Cause Register，存储引起这次 trap 的原因。
     * ![](./pic/mcause.png)
     * 如果进入 trap 的原因是中断，则最高位 interrupt bit 设置为 1。
@@ -55,6 +55,10 @@ exception or an interrupt.
 ## 实验要求
 
 本实验需要修改硬件（添加 `RV_INT` 模块，修改 Datapath）以及软件（修改验收代码，实现 trap 处理）。
+
+修改 `SCPU_ctrl` 模块用来检查 `ecall` 指令和非法指令，并给出相应信号接入 `Datapath` 中。
+
+添加 `VGA` 模块的 debug 信号，至少需要 `mstatus, mcause, mepc, mtvec` 的值。
 
 你需要设计实现三种 trap：外部中断、 `ecall` 指令和非法指令。
 
@@ -91,8 +95,64 @@ module RV_INT(
 * 根据不同的中断信号，对 CSRs 进行修改，再次提醒，我们的简单实现中，需要硬件对 `mepc` 的具体取值进行管理。
 * 请注意设置 CSRs 的初始值，并注意 `rst` 时恢复初始值。
 
-你可能需要修改 `SCPU_ctrl` 模块用来检查 `ecall` 指令和非法指令，并给出相应信号接入 `Datapath` 中。
-
 ## 软件实现
 
-你需要修改 Lab4-3 提供的验收代码，实现 trap 处理程序以及三种对应的处理程序
+你需要修改 Lab4-3 提供的验收代码，实现 trap 处理程序以及三种对应的处理程序。
+
+### trap 处理程序
+
+一个简单的方式是放置若跳转指令，在 trap 处理程序中跳至相应中断/异常的处理程序中。如果你使用 Vectored 模式，并将三种 trap 的 exception code 分别设置为 `1, 2, 3`，你的代码应该类似于：
+
+```
+# mtvec.BASE = 0x0
+# mtvec.MODE = 1(Vecotored mode)
+jal x0, main          # PC = 0x0, 正常程序的入口
+jal x0, ill_trap      # PC = 0x4, 进入非法指令处理程序
+jal x0, ecall_trap    # PC = 0x8, 进入 ecall 处理程序
+jal x0, int_trap      # PC = 0xC, 进入外部中断处理程序
+```
+
+### 图形模式下的打印
+
+目前提供的七段数码管 IP 核仅能支持打印一半的图形（4个），另一半是拷贝。
+
+输入的 `Disp_num` 到打印图形的映射如下：
+
+```verilog title="SSeg_map"
+module SSeg_map(
+  input[31:0]Disp_num, 
+  output[63:0]Seg_map
+);
+
+   assign Seg_map = {
+      Disp_num[0],  Disp_num[4], Disp_num[16], Disp_num[25], 
+      Disp_num[17], Disp_num[5], Disp_num[12], Disp_num[24], 							 
+      Disp_num[1],  Disp_num[6], Disp_num[18], Disp_num[27], 
+      Disp_num[19], Disp_num[7], Disp_num[13], Disp_num[26], 
+      Disp_num[2],  Disp_num[8], Disp_num[20], Disp_num[29], 
+      Disp_num[21], Disp_num[9], Disp_num[14], Disp_num[28], 
+      Disp_num[3],  Disp_num[10],Disp_num[22], Disp_num[31], 
+      Disp_num[23], Disp_num[11],Disp_num[15], Disp_num[30],
+      
+      // Copied right part
+      Disp_num[0],  Disp_num[4], Disp_num[16], Disp_num[25], 
+      Disp_num[17], Disp_num[5], Disp_num[12], Disp_num[24], 							 
+      Disp_num[1],  Disp_num[6], Disp_num[18], Disp_num[27], 
+      Disp_num[19], Disp_num[7], Disp_num[13], Disp_num[26], 
+      Disp_num[2],  Disp_num[8], Disp_num[20], Disp_num[29], 
+      Disp_num[21], Disp_num[9], Disp_num[14], Disp_num[28], 
+      Disp_num[3],  Disp_num[10],Disp_num[22], Disp_num[31], 
+      Disp_num[23], Disp_num[11],Disp_num[15], Disp_num[30],        
+      };
+	
+   
+endmodule
+```
+
+其中 `Disp_num` 为我们需要提供的 32-bit 值，`Seg_map` 是最终打印出来的图形，`0` 为亮。现在我们可以设计出来希望打印的图形，因此需要通过这个图形的逆映射得到输入给 `Sseg7` 的 `Disp_num` 值。
+
+举个例子，我们希望在第三个数码管上绘制一个矩形，可以很容易得到 `Seg_map` 的值应该为 `0xFFFF39FF`，它只会点亮第三个数码管的 `a, b, f, g`，即一个小矩形。通过逆映射，我们得到 `Disp_num` 值为 `0xFFFFBCFB`。另一个例子，打印第二位上的小矩形 `Seg_map: 0xFF39FFFF ---> Disp_num: 0xFFFFDF3D`。
+
+这一步中，你需要得到希望打印三种 trap 的图形的 `Disp_num` 值。你需要查看验收代码，学习如何将这个值送入七段数码管最终显示一个图形。
+
+请注意，在每个处理程序的末尾，你需要一个 `mret` 指令告知 `RV_INT` 模块中断处理已经结束，需要恢复正常的指令流并对必要的 CSR 进行修改。
