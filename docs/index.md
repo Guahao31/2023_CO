@@ -22,6 +22,7 @@
 
 | 时间 | 内容 |
 | --- | :------------------------------------ |
+| 2023.4.15 | [Release] Lab4-4 |
 | 2023.4.11 | [Fix] Lab4-3 验收代码 <br> [Release] Lab4-3 |
 | 2023.4.4 | [Update] Lab4 headerfile 增加 VGA Debug 信号相关 |
 | 2023.3.29 | [Fix] Lab4: SCPU_ctrl_tb.v |
@@ -31,7 +32,7 @@
 | 2023.3.9 | [Fix] Lab1: SRA要求 |
 | 2023.3.6 | [Release] Lab3 |
 | 2023.3.5 | [Update] Lab1 ALU_operation 补充 |
-| 2023.3.4 | [Update] Lab2 添加下板要求 |
+<!-- | 2023.3.4 | [Update] Lab2 添加下板要求 | -->
 <!-- | 2023.3.3 | [Release] Lab2 | -->
 <!-- | 2023.3.1 | [Update] Lab0 报告要求 <br> [Release] Lab1 | -->
 <!-- | 2023.2.28 | [Release] Lab0 | -->
