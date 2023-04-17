@@ -162,7 +162,7 @@ endmodule
 在完成以上所有步骤后，请检查：
 
 * `RV_INT` 模块中的 `mtvec.BASE` 是否指向了 trap 处理程序的首个指令。
-* 我们需要实现 Direct 模式，`RV_INT` 模块中 `mtvec.BASE + 4*cause` 是否能跳到正确的处理程序。
+* 我们需要实现 Vectored 模式，`RV_INT` 模块中 `mtvec.BASE + 4*cause` 是否能跳到正确的处理程序。
 * 请确保你在某个模式的处理下放置了 `ecall` 指令；在某个模式的处理下放置了一条非法指令。
 * Venus 平台无法为你解析 `mret`，请自行书写，并注意 trap 中断处理程序的结尾一定要有 `mret`。
 * 查看原验收代码的 `148, 149` 行，确保这里的 `jalr` 能够跳转到 `loop2`。
