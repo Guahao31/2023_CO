@@ -72,9 +72,12 @@ nav:
     - Instruction Extension: Lab4/instr_extension.md
     - Exception & Interruption: Lab4/exception_interruption.md
 
+  - Lab5:
+    - Lab5/Lab5.md
+
   - Other:
     - Git 基础: Other/about_git.md
     - 在Linux/macOS 上仿真: Other/Verilog_Simulation.md
     - RISC-V 32I: Other/RISC_V.md
-    - Venus 平台与 CPU Testbench: Other/Venus_and_Testbench.md
+    - RISC-V Decoder 与 CPU Testbench: Other/Decoder_and_Testbench.md
 

@@ -1,4 +1,4 @@
-# Venus 平台与 CPU Testbench
+# RISC-V Decoder 与 CPU Testbench
 
 ## Venus
 
@@ -9,6 +9,10 @@
 在 `Simulator` 中点击 `Assemble & Simulate from Editor` 按钮，此时你将在界面中看到你输入的代码、对应的 PC 值与机器码等信息。如果你又在 `Editor` 中修改了代码，可以点击 `Re-assemble from Editor` 获得新的内容。
 
 为获得机器码，在 `Simulator` 中点击 `dump`，下方 console 会得到机器码，点击 `Download!` 或拷贝即可。
+
+## xg 还是你 xg
+
+[@TonyCrane](https://github.com/TonyCrane) 基于 CyberChef 所做扩展，可以支持我们需要的指令 decode（暂时不支持 label 的使用），它部署在[这里](https://lab.tonycrane.cc/CyberChef)。拖动 `TonyCrane Extensions` 下的 `RISC-V Encode` 到 `Recipe` 中，选择 `Hex string` 输出模式即可。
 
 ## TestBench
 
