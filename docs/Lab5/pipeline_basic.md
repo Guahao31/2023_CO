@@ -2,7 +2,7 @@
 
 验收代码如下
 
-```verilog
+```
 auipc x26, 0x40
 add zero, zero, zero
 add zero, zero, zero
