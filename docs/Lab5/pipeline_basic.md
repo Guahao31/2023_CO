@@ -85,7 +85,7 @@ bne x1, x24, dummy
 add zero, zero, zero
 add zero, zero, zero
 add zero, zero, zero
-lbu x24, 0x18(zero)# x24=0000FFFF
+lbu x24, 0x18(zero)# x24=000000FF
 add zero, zero, zero
 add zero, zero, zero
 add zero, zero, zero
