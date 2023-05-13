@@ -88,7 +88,7 @@
         addi x1, zero, -1 # x1=FFFFFFFF
         lb x24, 0x18(zero) # x24=FFFFFFFF
         bne x1, x24, dummy
-        lbu x24, 0x18(zero)# x24=0000FFFF
+        lbu x24, 0x18(zero)# x24=000000FF
         bge x1, x24, dummy
         lh x24, 0x60(zero) # x24=FFFFF7E0
         blt zero, x24, dummy
