@@ -75,6 +75,7 @@ nav:
   - Lab5:
     - Lab5/Lab5.md
     - 基础流水线: Lab5/pipeline_basic.md
+    - 解决冲突: Lab5/pipeline_hazard.md
 
   - Other:
     - Git 基础: Other/about_git.md
