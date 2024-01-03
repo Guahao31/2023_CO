@@ -1,3 +1,5 @@
+> **本文档已停止更新，新文档[仓库地址](https://github.com/Guahao31/2024_CO)**
+
 # ZJU-Computer Orgnization Lab 2023
 
 本仓库用来发布《计算机组成与设计》课程实验文档，你可以直接查看[在线文档](https://guahao31.github.io/2023_CO)，或将本仓库拉至本地部署。
